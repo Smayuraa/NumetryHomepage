@@ -1,20 +1,13 @@
 /* Video Container */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
+
 .video-container {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column; /* Content ko vertically center karne ke liye */
+    /* height: auto; */
+    min-height: 50vh;
+    margin-top:38%;
+    margin-left:45%;
+    
 }
+
 
 /* Fullscreen Background Video */
 .background-video {

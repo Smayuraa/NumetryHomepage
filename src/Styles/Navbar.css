@@ -1,0 +1,56 @@
+/* Navbar.css */
+
+/* Navbar Styling */
+.navbar {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Logo Styling */
+  .logo-img {
+    height: 40px;
+    width: auto;
+    border-radius: 5px;
+    margin-left: 5rem;
+  }
+  
+  /* Navbar Links */
+  .navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #17a2b8 !important; /* Bootstrap primary color */
+  }
+  
+  /* Navbar Toggler */
+  .navbar-toggler {
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler:focus,
+  .navbar-toggler:hover {
+    box-shadow: none;
+  }
+  
+  /* Center Navbar Items */
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px;
+    }
+    
+    .navbar-nav {
+      flex-direction: column;
+    }
+  }
+  

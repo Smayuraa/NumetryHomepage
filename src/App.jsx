@@ -1,23 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Home from './pages/Home'
-import Stats from './pages/Stats'
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-
-
-
+import Navbar from './Components/Navbar';
+import Home from './pages/Home';
+import Footer from "./Components/Footer";
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-
-<Router>
+    <Router>
+      {/* Navbar should be outside Routes */}
+      <Navbar />  
+      
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -27,8 +22,9 @@ function App() {
           <Route path="/hire" element={<HireDeveloper />} /> */}
         </Routes>
       </div>
-    </Router></>
-  )
+      <Footer/>
+    </Router>
+  );
 }
 
-export default App
+export default App;
