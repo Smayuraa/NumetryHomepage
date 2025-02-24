@@ -1,0 +1,72 @@
+/* Video Container */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+.video-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Content ko vertically center karne ke liye */
+}
+
+/* Fullscreen Background Video */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Button Container */
+.contentBtn {
+    position: relative;
+    z-index: 1;
+    margin-top: 40vh; /* Button ko neeche shift kar diya */
+}
+
+/* 🔥 Professional Explore Button */
+.contentBtn button {
+    background: #007bff; /* Professional Blue */
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 22px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.contentBtn button:hover {
+    background: white;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+/* Click Animation */
+.contentBtn button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contentBtn {
+        margin-top: 25vh; /* Mobile ke liye aur neeche shift kiya */
+    }
+    .contentBtn button {
+        font-size: 16px;
+        padding: 10px 28px;
+    }
+}

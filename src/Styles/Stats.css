@@ -1,0 +1,39 @@
+.stats-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: #000;  /* 🔥 Black Background */
+    color: #fff;  /* White Text */
+  }
+  
+  .stats-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 2%;
+  }
+  
+  .stat-card {
+    background: rgba(255, 255, 255, 0.1); /* Slight Transparent Dark */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    min-width: 200px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .stat-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .stat-card h3 {
+    font-size: 2.5rem;
+    color: #ff7e5f; /* Gradient Orange Text */
+  }
+  
+  .stat-card p {
+    font-size: 1rem;
+    color: #ddd;
+  }
+  
