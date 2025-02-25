@@ -7,6 +7,8 @@ import Footer from "./Components/Footer";
 import ContactUs from "./pages/ContactUs";
 import HireDeveloper from './pages/HireDeveloper'
 import Navbar from "./components/Navbar";
+import DotNet from './pages/DotNetDeveloper'
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -21,6 +23,8 @@ function App() {
           <Route path="/home" element={<Home />} />
            <Route path="/contact" element={<ContactUs />} />
           <Route path="/hire" element={<HireDeveloper />} /> 
+          <Route path="/hire/dotnet" element={<DotNet />} /> 
+
           {/* <Route path="/footer" element={<Footer />} /> */}
 
         </Routes>

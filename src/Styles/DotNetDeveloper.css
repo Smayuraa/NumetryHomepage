@@ -1,0 +1,824 @@
+html, body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overflow-y: auto; /* Enables vertical scrolling */
+  }
+  
+
+/* General Styles */
+.dotnet-container {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #0a192f, #000000); /* Dark blue to black gradient */
+  padding: 20px;
+  margin-top: 60px;
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex; /* Enables flexbox */
+  align-items: center; /* Aligns content vertically */
+  justify-content: space-between; /* Spreads content evenly */
+  padding: 80px 60px; /* Increased padding for better spacing */
+  background: linear-gradient(135deg, #0a192f, #1e3c72); /* Dark blue gradient */
+  border-radius: 15px; /* Slightly larger radius for a softer look */
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+  overflow: hidden; /* Ensures child elements don't overflow */
+  animation: slideIn 1s ease-in-out; /* Slide-in animation */
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Left content (text) */
+.hero-text {
+  flex: 1; /* Takes up available space */
+  max-width: 50%; /* Restricts width */
+  text-align: left;
+  color: #fff;
+  animation: fadeInLeft 1s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fadeInLeft {
+  from {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* Style the unordered list */
+.features-list {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0;
+  margin: 20px 0;
+}
+
+/* Styling for each list item */
+.features-list li {
+  font-size: 1.1rem;
+  margin-bottom: 15px; /* Space between each item */
+  display: flex; /* Align icon and text horizontally */
+  align-items: center; /* Vertically align the icon and text */
+  color: #fff;
+  position: relative;
+  padding-left: 30px; /* Space for the custom bullet */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hover effect */
+}
+
+.features-list li:hover {
+  transform: translateX(10px); /* Slight move on hover */
+  opacity: 0.9; /* Subtle fade on hover */
+}
+
+/* Custom square bullet point styling */
+.features-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%; /* Centered vertically */
+  transform: translateY(-50%);
+  width: 12px; /* Slightly larger bullet */
+  height: 12px; /* Slightly larger bullet */
+  background-color: white; /* Green bullet for contrast */
+  border-radius: 3px; /* Rounded corners for a modern look */
+  transition: background-color 0.3s ease; /* Smooth color change */
+ 
+}
+
+.features-list li:hover::before {
+  background-color: #00bcd4; /* Cyan on hover */
+}
+
+/* Right content (image) */
+.hero-image {
+  flex: 1; /* Takes up available space */
+  text-align: right;
+  animation: fadeInRight 1s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fadeInRight {
+  from {
+      opacity: 0;
+      transform: translateX(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.hero-image img {
+  max-width: 90%; /* Ensures image fits inside */
+  height: auto;
+  border-radius: 15px; /* Slightly larger radius */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.hero-image img:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+/* Button Styles */
+.hire-now-btn {
+  background: #00bcd4; /* Cyan background */
+  color: #fff; /* White text */
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px; /* Increased margin for better spacing */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+  animation: pulse 2s infinite; /* Pulse animation */
+}
+
+.hire-now-btn:hover {
+  background: #0097a7; /* Darker cyan on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+      flex-direction: column; /* Stack content vertically on smaller screens */
+      padding: 40px 20px; /* Reduced padding for smaller screens */
+  }
+
+  .hero-text, .hero-image {
+      max-width: 100%; /* Full width on smaller screens */
+      text-align: center; /* Center align text */
+  }
+
+  .hero-image {
+      margin-top: 30px; /* Added space between text and image */
+  }
+
+  .features-list li {
+      justify-content: center; /* Center align list items */
+  }
+
+  .hire-now-btn {
+      width: 100%; /* Full-width button on smaller screens */
+  }
+}
+  
+  
+  /* Hiring Models */
+/* Hiring Models */
+/* Hiring Models */
+.hiring-models {
+  text-align: center; /* Centers the h2 heading */
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeIn 1.5s forwards 0.5s; /* Fade-in effect */
+}
+
+.hiring-models h2 {
+  font-size: 2rem;
+  margin-bottom: 30px; /* Space below the h2 */
+  color: #fff; /* White text */
+}
+
+.model-cards {
+  display: flex;
+  justify-content: space-evenly; /* Evenly space out the cards */
+  gap: 20px; /* Space between the cards */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.model-card {
+  background: rgba(94, 78, 78, 0.26); /* Light background with transparency */
+  padding: 20px;
+  margin: 10px;
+  flex: 1 1 300px; /* Makes cards flexible but not too wide */
+  max-width: 400px;
+  border-radius: 10px; /* Rounded corners */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  opacity: 0;
+  animation: fadeInCard 1s forwards; /* Fade-in effect for individual cards */
+}
+
+.model-card:nth-child(1) {
+  animation-delay: 0.3s; /* Staggered animation for each card */
+}
+
+.model-card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.model-card:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+.model-card:hover {
+  transform: scale(1.05); /* Slightly scale up the card on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Darker shadow */
+  background: rgba(26, 32, 44, 0.7); /* Darker background on hover */
+}
+
+.model-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff; /* White text */
+}
+
+.model-card p {
+  font-size: 1.1rem;
+  color: #e0e0e0; /* Light grey text */
+}
+
+/* Logo Styling */
+.model-logo {
+  width: 80px; /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 15px; /* Space between logo and text */
+  transition: transform 0.3s ease-in-out; /* Smooth transform transition */
+}
+
+.model-logo:hover {
+  transform: rotate(15deg) scale(1.1); /* Rotate and scale logo on hover */
+}
+
+/* Keyframes for Fade-In Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInCard {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.why-hire {
+  display: flex;
+  gap: 20px;
+  height: 100vh; /* Full screen height */
+  padding: 0 40px;
+  background: #111; /* Black background for the section */
+}
+
+.left-card,
+.right-content {
+  width: 50%; /* 50-50 split */
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+}
+
+.left-card {
+  background: #1E2A47; /* Dark blue */
+  color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start (top) */
+  height: 100%; /* Ensure the card takes up full height */
+}
+
+.left-card h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px; 
+}
+
+.question-mark {
+  width: 350px; /* Adjust the size of the image */
+  height: auto;
+  margin-top: 50px; /* Push the image to the bottom of the container */
+}
+
+.right-content {
+  background: #1e2a47;  /* White background */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+
+}
+
+.right-content p {
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.right-content ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.right-content li {
+  font-size: 1.1rem;
+  color: #00b3ff; /* Blue color for list items */
+  margin-bottom: 12px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.right-content li:hover {
+  color: #0056b3; /* Darker blue on hover */
+  transform: translateX(10px);
+  cursor: pointer;
+}
+
+
+.right-content li:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+
+  
+  /* .NET Solutions */
+ /* General Section Styling */
+.dotnet-section {
+  padding: 60px 20px;
+  background-color: #1a1a1a; /* Dark background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff; /* White text */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 50px;
+  color: white; /* Blue accent color */
+  position: relative;
+  margin-top: 30px;
+}
+
+
+
+/* Solutions Grid Styling */
+.solutions-grid,
+.technologies-grid,
+.integrations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solution-item,
+.tech-item,
+.integration-item {
+  background-color: #2c3e50; /* Dark blue background */
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff; /* White text */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+}
+
+.solution-item:hover,
+.tech-item:hover,
+.integration-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  background-color: #34495e; /* Slightly lighter blue on hover */
+}
+
+/* Technologies Grid Styling */
+.technologies-grid .tech-item {
+  background-color: #2c3e50; /* Dark blue background */
+  border-left: 4px solid #3498db; /* Blue accent border */
+}
+
+/* Integrations Grid Styling */
+.integrations-grid .integration-item {
+  background-color: #2c3e50; /* Dark blue background */
+  border-left: 4px solid #2ecc71; /* Green accent border */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .solutions-grid,
+  .technologies-grid,
+  .integrations-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+  
+  /* Reviews */
+  .reviews {
+    background: linear-gradient(to bottom, #0a0a0a, #1e3a8a); /* Black to Blue gradient */
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+  
+  .reviews h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+  }
+  
+  .review-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .review-card {
+    background: #ffffff; /* White background for card */
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid #1e3a8a; /* Blue border */
+    width: 20rem;
+    transform: rotate(-3deg);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .review-card:nth-child(2) {
+    transform: rotate(2deg);
+  }
+  
+  .review-card:nth-child(3) {
+    transform: rotate(-2deg);
+  }
+  
+  .review-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 8px 8px 20px rgba(30, 58, 138, 0.5); /* Glowing blue shadow on hover */
+  }
+  
+  .review-card p {
+    font-style: italic;
+    color: #0a0a0a; /* Black text for readability */
+  }
+  
+  .review-card span {
+    display: block;
+    text-align: right;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #1e3a8a; /* Blue author text */
+  }
+  
+  
+  /* Hiring Process */
+  .hiring-process {
+    background-color: #0d0d0d; /* Dark Black */
+    padding: 4rem 0;
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+  }
+  
+  .hiring-process h2 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white; /* Deep Blue */
+    position: relative;
+    display: inline-block;
+  }
+  
+  .hiring-process h2::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background: #1e40af;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .process-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .process-container::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    background: #1e40af; /* Deep Blue Timeline */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .process-card {
+    background: #1a1a1a;
+    color: white;
+    padding: 1.8rem;
+    width: 400px;
+    border-radius: 12px;
+    border: 2px solid #1e40af; /* Blue Border */
+    box-shadow: 0px 5px 15px rgba(30, 64, 175, 0.3);
+    text-align: left;
+    position: relative;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+
+  
+  .process-card:nth-child(odd) {
+    align-self: flex-start;
+  }
+  
+  .process-card:nth-child(even) {
+    align-self: flex-end;
+  }
+  
+  .step-number {
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+    background: #1e40af;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid #0d0d0d;
+    box-shadow: 0px 5px 15px rgba(30, 64, 175, 0.5);
+  }
+  
+  .process-card:nth-child(even) .step-number {
+    left: auto;
+    right: -30px;
+  }
+  
+  .process-card h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+  }
+  
+  .process-card p {
+    font-size: 1.1rem;
+    color: #d1d5db;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .hiring-process h2 {
+      font-size: 2.2rem;
+    }
+  
+    .process-container::before {
+      left: 20px;
+    }
+  
+    .process-card {
+      width: 90%;
+      margin-left: 40px !important;
+      align-self: flex-start;
+    }
+  
+    .process-card:nth-child(even) {
+      align-self: flex-start;
+      margin-right: 0;
+    }
+  
+    .step-number {
+      left: -20px !important;
+    }
+  }
+  
+  
+  
+  /* FAQs */
+  .faqs {
+    background: linear-gradient(to bottom, #0a0a0a, #0f172a); /* Darker gradient for depth */
+    padding: 5rem 0;
+    text-align: center;
+    color: white;
+  }
+  
+  .faqs h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white; /* Light Blue */
+    position: relative;
+  }
+  
+  .faq-container {
+    max-width: 850px;
+    margin: auto;
+  }
+  
+  .faq-item {
+    background: #1e293b; /* Dark Blue */
+    color: white;
+    padding: 1.8rem;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    box-shadow: 0px 4px 15px rgba(56, 189, 248, 0.2); /* Light Blue Shadow */
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+
+  
+  .faq-item h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+    padding-left: 20px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .faq-item h3::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    color: white;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .faq-item:hover h3::before {
+    color: #38bdf8;
+  }
+  
+  .faq-item p {
+    font-size: 1rem;
+    color: #d1d5db;
+    text-align: left;
+    margin-top: 10px;
+    line-height: 1.5;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .faq-item:hover p {
+    color: #ffffff;
+  }
+  
+  
+  
+  /* Contact Section */
+  .contact-section {
+    background: linear-gradient(135deg, #000428, #004e92); /* Black to blue gradient */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.contact-section textarea {
+    resize: none;
+    height: 120px;
+}
+
+.contact-section button {
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-section button:hover {
+    background: #0056b3;
+}
+
+
+
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 2rem;
+    }
+  
+    .hire-now-btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  
+    .model-card, .review-card, .faq-item {
+      max-width: 90%;
+    }
+  }
+  
