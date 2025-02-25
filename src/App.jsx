@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Navbar from './Components/Navbar';
 import Home from './pages/Home';
 import Footer from "./Components/Footer";
+import ContactUs from "./pages/ContactUs";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -17,8 +18,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-          {/* <Route path="/contactus" element={<ContactUs />} />
-          <Route path="/footer" element={<Footer />} />
+           <Route path="/contact" element={<ContactUs />} />
+          {/*<Route path="/footer" element={<Footer />} />
           <Route path="/hire" element={<HireDeveloper />} /> */}
         </Routes>
       </div>

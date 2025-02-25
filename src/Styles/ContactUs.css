@@ -1,0 +1,134 @@
+/* Ensure it appears below the Navbar */
+.contact-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 80px 20px 20px; /* Top padding increased for navbar spacing */
+    margin-top: 60px; /* Adjust according to navbar height */
+  }
+  
+  /* Contact Card */
+  .contact-page {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  /* Left Section - Image */
+  .contact-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;
+    padding: 20px;
+  }
+  
+  .contact-left img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 8px;
+  }
+  
+  /* Right Section - Form */
+  .contact-right {
+    flex: 1.5;
+    padding: 40px;
+    text-align: left;
+  }
+  
+  .contact-right h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .contact-right p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styling */
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+  
+  .contact-form textarea {
+    min-height: 120px;
+    resize: none;
+  }
+  
+  /* Submit Button */
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background: #0056b3;
+  }
+  
+  /* Contact Info */
+  .contact-info {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .contact-info p {
+    font-size: 14px;
+    color: #444;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-info i {
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-page {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .contact-left,
+    .contact-right {
+      width: 100%;
+    }
+  
+    .contact-left img {
+      max-width: 180px;
+    }
+  
+    .contact-right {
+      padding: 20px;
+    }
+  
+    .contact-page-container {
+      padding-top: 100px; /* Extra padding for smaller screens */
+    }
+  }
+  
