@@ -18,7 +18,7 @@ const Stats = () => {
 
   return (
     <section className="stats-section">
-      <h2>We Deliver Real Value to Businesses</h2>
+      <h2 className="head">We Deliver Real Value to Businesses</h2>
       <div className="stats-container">
         <div className="stat-card">
           <h3>{count.a}%</h3>

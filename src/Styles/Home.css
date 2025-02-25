@@ -1,7 +1,25 @@
 /* Video Container */
+/* Fix unwanted page movement */
+/* html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}*/
+
 
 .video-container {
-    /* height: auto; */
+     height: auto; 
     min-height: 50vh;
     margin-top:38%;
     margin-left:45%;
@@ -23,7 +41,7 @@
 .contentBtn {
     position: relative;
     z-index: 1;
-    margin-top: 40vh; /* Button ko neeche shift kar diya */
+    margin-top: 10vh; /* Button ko neeche shift kar diya */
 }
 
 /* 🔥 Professional Explore Button */

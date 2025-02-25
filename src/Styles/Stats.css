@@ -4,6 +4,9 @@
     background: #000;  /* 🔥 Black Background */
     color: #fff;  /* White Text */
   }
+  .head{
+    color: white;
+  }
   
   .stats-container {
     display: flex;
