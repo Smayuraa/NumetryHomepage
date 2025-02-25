@@ -1,0 +1,194 @@
+
+  
+  /* Full-Screen Container */
+  .hire-developer {
+    width: 100%; /* Use 100% instead of 100vw to avoid scrollbar issues */
+    min-height: 100vh; /* Ensure it covers the full viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px; /* Space for future navbar */
+    margin-top: 5%;
+  }
+  
+  /* Space between "Hire Developer" text and cards */
+  .hire-developer h1 {
+    margin-bottom: 40px; /* Increased space below the text */
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center; /* Center the text */
+  }
+  
+  /* Developer Grid */
+  .developer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    justify-items: center;
+    padding: 0 20px; /* Add horizontal padding only */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+  
+  /* Developer Card */
+  .developer-card {
+    background: #1e1e1e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    max-width: 240px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Hover Effect for Cards */
+  .developer-card:hover {
+    background: #2a2a2a;
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+  }
+  
+  /* Icon Style */
+  .dev-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #00aaff;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect for Icon */
+  .developer-card:hover .dev-icon {
+    color: #ffffff;
+  }
+  
+  /* Text Style inside Card */
+  .developer-card h3 {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect for Heading */
+  .developer-card:hover h3 {
+    color: #00aaff;
+  }
+  
+  /* Description Text inside Card */
+  .developer-card p {
+    font-size: 14px;
+    color: #b0b0b0;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover Effect for Description */
+  .developer-card:hover p {
+    color: #ffffff;
+  }
+  
+  /* Responsive Design for Tablets */
+  @media (max-width: 768px) {
+    .developer-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  
+    .developer-card {
+      max-width: 200px;
+    }
+  
+    .dev-icon {
+      font-size: 28px;
+    }
+  
+    .developer-card h3 {
+      font-size: 18px;
+    }
+  
+    .developer-card p {
+      font-size: 12px;
+    }
+  }
+  
+  /* Responsive Design for Phones */
+  @media (max-width: 480px) {
+    .developer-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .developer-card {
+      max-width: 100%;
+    }
+  
+    .dev-icon {
+      font-size: 24px;
+    }
+  
+    .developer-card h3 {
+      font-size: 16px;
+    }
+  
+    .developer-card p {
+      font-size: 12px;
+    }
+  }
+  .title {
+    font-size: 2.5rem; /* Large and bold */
+    font-weight: 700;
+    text-align: center;
+    color: #007bff; /* Stylish Blue */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 12px;
+}
+
+/* Bigger Underline */
+.title::after {
+    content: "";
+    width: 120px;  /* Increase width for bigger line */
+    height: 6px;   /* Increase thickness */
+    background: #007bff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2rem;
+    }
+    .title::after {
+        width: 100px;
+        height: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+    }
+    .title::after {
+        width: 80px;
+        height: 4px;
+    }
+}

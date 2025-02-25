@@ -2,10 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import Navbar from './Components/Navbar';
 import Home from './pages/Home';
 import Footer from "./Components/Footer";
 import ContactUs from "./pages/ContactUs";
+import HireDeveloper from './pages/HireDeveloper'
+import Navbar from "./components/Navbar";
 function App() {
   const [count, setCount] = useState(0);
 
@@ -19,8 +20,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
            <Route path="/contact" element={<ContactUs />} />
-          {/*<Route path="/footer" element={<Footer />} />
-          <Route path="/hire" element={<HireDeveloper />} /> */}
+          <Route path="/hire" element={<HireDeveloper />} /> 
+          {/* <Route path="/footer" element={<Footer />} /> */}
+
         </Routes>
       </div>
       <Footer/>
