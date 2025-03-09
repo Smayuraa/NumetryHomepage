@@ -1,0 +1,40 @@
+.stat-card {
+    border: 2px solid blue; /* Blue border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    background-color: white; /* White background */
+    box-shadow: 2px 2px 10px rgba(0, 0, 255, 0.1); /* Light blue shadow */
+    text-align: center;
+    margin: 10px;
+  }/* Full div ko blue border */
+.border-blue {
+    border: 3px solid blue;  /* Blue border */
+    padding: 20px;          /* Some padding for spacing */
+    border-radius: 10px;    /* Smooth rounded edges */
+    background-color: white; /* White background */
+  }
+  .powerbi-heading {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+    color: white; /* White text */
+  }
+  
+  .powerbi-heading::after {
+    content: "";
+    display: block;
+    width: 80px;       /* Line ki width */
+    height: 4px;       /* Line ki height */
+    background-color: blue; /* Blue color */
+    margin: 5px auto;  /* Center align */
+  }
+  .hover-line {
+    height: 4px;
+    background-color: blue;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+  }
+  
