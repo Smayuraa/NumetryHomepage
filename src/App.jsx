@@ -9,6 +9,7 @@ import HireDeveloper from './pages/HireDeveloper'
 import Navbar from "./components/Navbar";
 import DotNet from './pages/DotNetDeveloper'
 import Service from "./pages/Service";
+import Industry from "./pages/Industry";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -26,6 +27,8 @@ function App() {
           <Route path="/hire" element={<HireDeveloper />} /> 
           <Route path="/hire/dotnet" element={<DotNet />} /> 
           <Route path="/services" element={<Service />} /> 
+          <Route path="/industry" element={<Industry />} /> 
+
 
 
 
