@@ -39,9 +39,10 @@
 
 /* Button Container */
 .contentBtn {
-    position: relative;
+    position: absolute;
+    top:60%;
     z-index: 1;
-    /* margin-top: 8vh;  */
+     margin-top: 8vh;  
 }
 
 /* 🔥 Professional Explore Button */

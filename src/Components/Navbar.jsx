@@ -4,7 +4,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Navbar.css"; 
 import logo from '../assets/numetry-logo.jpg'
 
-
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +22,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark  fixed-top ${scrolled ? "scrolled" : ""}`}>
+    <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolled ? "scrolled" : ""}`}>
       <div className="container-fluid">
         {/* Logo */}
         <Link className="navbar-brand d-flex align-items-center" to="/">
@@ -50,6 +49,7 @@ const Navbar = () => {
             <li className="nav-item"><Link className="nav-link" to="/hire">HIRE DEVELOPER</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/contact">CONTACT US</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/what-we-do">WHAT WE DO</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/training-courses">TRAINING & COURSES</Link></li>
           </ul>
         </div>
       </div>

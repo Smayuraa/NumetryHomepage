@@ -1,0 +1,103 @@
+/* Courses Section */
+.courses {
+    background: #000000; /* Pure Black Background */
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 2.5rem;
+    color: #FF6600; /* Highlighted Heading */
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Course Grid */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    padding: 0 10%;
+}
+
+/* Course Card */
+.course-card {
+    background: #1a1a1a; /* Dark Grey Cards */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Course Images */
+.course-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.course-card:hover img {
+    transform: scale(1.08);
+}
+
+/* Course Titles */
+.course-card h3 {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Enroll Button */
+.enroll-button {
+    background: linear-gradient(135deg, #FF6600, #e65c00);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+.enroll-button:hover {
+    background: linear-gradient(135deg, #e65c00, #FF4500);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .courses h2 {
+        font-size: 2rem;
+    }
+    
+    .course-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 0 5%;
+    }
+
+    .course-card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .courses h2 {
+        font-size: 1.8rem;
+    }
+
+    .enroll-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
