@@ -12,6 +12,8 @@ import Service from "./pages/Service";
 import Industry from "./pages/Industry";
 import Traning from "./pages/TraningAndCor"; // ✅ Hero component import kiya
 import EnrollmentForm from "./pages/EnrollmentForm"; // ✅ Form ka import sahi kiya
+import AboutUs from './pages/AboutUs'
+import Tech from './pages/Technologies'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -25,6 +27,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<AboutUs/>} />
+          <Route path="/technologies" element={<Tech/>} />
+
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/hire" element={<HireDeveloper />} />
           <Route path="/hire/dotnet" element={<DotNet />} />

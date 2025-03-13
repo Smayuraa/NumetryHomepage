@@ -1,0 +1,101 @@
+.aboutus-container {
+    width: 80%;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 5%;
+  }
+  
+  .aboutus-heading {
+    font-size: 2.5rem;
+    color: #004AAD; /* Keeping your blue theme */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  /* Mission & Vision Sections */
+  .aboutus-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 0;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .aboutus-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Mission Section (Photo on Left, Text on Right) */
+  .aboutus-section.mission {
+    flex-direction: row; /* Image stays on the left */
+  }
+  
+  /* Vision Section (Photo on Right, Text on Left) */
+  .aboutus-section.vision {
+    flex-direction: row-reverse; /* Image moves to the right */
+  }
+  
+  .aboutus-image {
+    width: 40%;
+    max-width: 450px;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .aboutus-section:hover .aboutus-image {
+    transform: scale(1.05);
+  }
+  
+  .aboutus-text {
+    width: 55%;
+    text-align: left;
+    padding: 20px;
+    color: #ffffff; /* Keeping white text */
+  }
+  
+  .aboutus-subheading {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #004AAD; /* Keeping the same color scheme */
+  }
+  
+  .highlight {
+    color: #FFC107; /* Matching the golden/yellow accent */
+  }
+  
+  .aboutus-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 12px;
+    opacity: 0.9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .aboutus-section {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .aboutus-section.mission,
+    .aboutus-section.vision {
+      flex-direction: column; /* On small screens, images go above text */
+    }
+  
+    .aboutus-image,
+    .aboutus-text {
+      width: 100%;
+    }
+  }
+  

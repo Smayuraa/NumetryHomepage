@@ -47,9 +47,10 @@ const Navbar = () => {
             <li className="nav-item"><Link className="nav-link" to="/technologies">TECHNOLOGIES</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/industry">INDUSTRY</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/hire">HIRE DEVELOPER</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/training-courses">TRAINING & COURSES</Link></li>
+
             <li className="nav-item"><Link className="nav-link" to="/contact">CONTACT US</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/what-we-do">WHAT WE DO</Link></li>
-            <li className="nav-item"><Link className="nav-link" to="/training-courses">TRAINING & COURSES</Link></li>
           </ul>
         </div>
       </div>
