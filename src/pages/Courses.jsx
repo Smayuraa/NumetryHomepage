@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Courses.css";
 
@@ -24,15 +24,16 @@ const coursesData = [
     { img: course8, title: "Software Testing & QA" }
 ];
 
-const Courses = () => {
+// ForwardRef ka use kiya gaya hai taaki ref accept ho sake
+const Courses = forwardRef((props, ref) => {
     const navigate = useNavigate();
 
     const handleEnrollClick = () => {
-        navigate("/enroll"); // EnrollForm page pe jaane ke liye
+        navigate("/enroll"); // EnrollForm page pe navigate karega
     };
 
     return (
-        <section className="courses">
+        <section ref={ref} className="courses">
             <h2>Featured Courses</h2>
             <div className="course-grid">
                 {coursesData.map((course, index) => (
@@ -47,6 +48,6 @@ const Courses = () => {
             </div>
         </section>
     );
-};
+});
 
 export default Courses;

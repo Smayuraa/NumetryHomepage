@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -8,27 +9,22 @@ const Service = () => {
 
   const articles = [
     {
-      title: "How Power BI works for cloud computing and on-premises?",
-      text: "Power BI is a suite of Smartphone platforms developed by Microsoft for use on several mobile devices...",
+      title: "How Power BI Works For Cloud Computing And On-Premises?",
+      text: "Power BI is a suite of Smartphone platforms developed by Microsoft for use on several mobile devices. The Power BI report server, for example, is a web interface...",
       date: "14 FEB 2022",
-      author: "AUTHOR",
-      image: "your-image-url-1.jpg",
     },
     {
-      title: "How to leverage BI analytics for improved business functioning?",
-      text: "Intelligent buildings have moved from the future to the physical reality, yet the genuine guarantee...",
+      title: "How To Leverage BI Analytics For Improved Business Functioning?",
+      text: "Intelligent buildings have moved from the future to the physical reality, yet the genuine guarantee of the advancements is only understood at the core of this...",
       date: "3 MAY 2021",
-      author: "AUTHOR",
-      image: "your-image-url-2.jpg",
     },
     {
-      title: "How Do I create Power BI report with direct query in Dynamics 365?",
-      text: "Last year December, Microsoft announced the general availability of Dynamics 365 customer engagement…",
+      title: "How Do I Create Power BI Report With Direct Query In Dynamics 365?",
+      text: "Last year December, Microsoft announced the general availability of Dynamics 365 customer engagement...",
       date: "15 JAN 2021",
-      author: "AUTHOR",
-      image: "your-image-url-3.jpg",
     },
-  ]
+  ];
+  
   return ( 
     <div
     className="container-fluid p-0 m-0"
@@ -87,15 +83,16 @@ const Service = () => {
      
       
       <h3 className="fw-bold my-4">We Can Help You With:</h3>
-      <div className="d-flex justify-content-end mb-5">
-        <img 
-          src="https://numetry.in/wp-content/uploads/2023/04/power-bi.png" 
-          alt="Power BI" 
-          className="me-4" 
-          style={{ width: "500px", height: "250px" }} 
-        />
+    <div className="d-flex justify-content-start mb-5">
+  <img 
+    src="https://numetry.in/wp-content/uploads/2023/04/power-bi.png" 
+    alt="Power BI" 
+    className="me-4" 
+    style={{ width: "500px", height: "250px", marginLeft: "50px" }} 
+  />  
+
         <div>
-          <ul className="list-group" style={{ marginLeft: "20px" }}>
+          <ul className="list-group" style={{ marginLeft: "200px" }}>
             <li className="list-group-item">Creation of data lakes and gathering from multiple data sources.</li>
             <li className="list-group-item">Setup of analytics and accessible reporting features.</li>
             <li className="list-group-item">Quick, easy-to-use, prebuilt visualizations built just for your application.</li>
@@ -127,37 +124,45 @@ const Service = () => {
           We have some of the highly skilled and experienced Power BI consultants who have helped many global companies to grow their business with data as the backbone. If you aren’t sure about your data needs, you can always schedule a Power BI consulting session and get your queries answered.
         </p>
       </div>
-      <img 
+      {/* <img 
         src="https://static.vecteezy.com/system/resources/previews/007/692/124/non_2x/people-concept-illustration-of-our-team-management-about-us-for-graphic-and-web-design-business-presentation-and-marketing-material-vector.jpg" 
         alt="Our Team" 
         className="w-100 d-block my-4" 
         style={{ height: "auto" }} 
-      />
-<div className="container my-5">
-      <h2 className="text-center fw-bold my-4">RELATED ARTICLE</h2>
+      /> */}
+
+
+      <h2 className="mb-5">Related Article</h2>
       <div className="row">
         {articles.map((article, index) => (
-          <div className="col-md-4 mb-3" key={index}>
+          <motion.div
+            key={index}
+            className="col-md-4 d-flex"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+          >
             <div
-              className="card h-100 text-white article-card"
+              className="w-100 p-3 shadow-sm d-flex flex-column"
               style={{
-                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${article.image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
+                backgroundColor: "#D6D8FF",
+                borderRadius: "",
+                minHeight: "250px", // Ensures equal height
               }}
             >
-              <div className="card-body d-flex flex-column">
-                <h5 className="card-title">{article.title}</h5>
-                <p className="card-text flex-grow-1">{article.text}</p>
-                <p className="text-white"><em>DATE: {article.date} | {article.author}</em></p>
-              </div>
+              <h5 className="fw-bold">{article.title}</h5>
+              <p className="text-muted flex-grow-1">{article.text}</p>
+              <hr />
+              <p className="text-secondary">
+                DATE: {article.date} <span className="fw-bold">AUTHOR</span>
+              </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
       </div>
-    </div>
+
   );
 };
 

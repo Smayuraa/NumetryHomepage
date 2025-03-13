@@ -1,5 +1,22 @@
-.form-container {
+/* .form-container {
     max-width: 500px;
     width: 100%;
+  }
+   */
+
+   .form-container {
+    max-width: 500px;
+    width: 100%;
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 20px; /* 🔥 Reduced padding */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  h2 {
+    margin-top: 0; /* 🔥 Remove extra margin */
+    padding-top: 0; /* 🔥 Ensure no padding on top */
   }
   

@@ -1,7 +1,6 @@
-.hero {
+/* .hero {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(30, 30, 30, 0.8)), 
                 url('../assets/cource45.jpg') no-repeat center center/cover;
-    /* padding: 180px 20px; */
     color: white;
     text-align: center;
     display: flex;
@@ -27,4 +26,84 @@
 .cta-button:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+} */
+/* Hero Section Styling */
+.hero {
+    background: url('') no-repeat center center/cover;
+    background-size: cover;  /* Image ko full-screen cover karne ke liye */
+    background-position: center; /* Image center me rahe */
+    background-attachment: fixed; /* Scrolling par image fix rahe */
+    
+    width: 100vw;  /* Full width */
+    height: 100vh; /* Full height */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #f8f9fa; /* Soft white for better readability */
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    line-height: 1.6;
+}
+
+/* Heading Styling */
+.hero h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffcc00; /* Bright gold for premium look */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #ffffff; /* Pure white for contrast */
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #dcdcdc; /* Light gray for a subtle effect */
+    opacity: 0.8;
+    max-width: 800px;
+}
+
+/* CTA Button Styling */
+.cta-button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 22px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff; /* White text for strong visibility */
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+.hero-features {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Text ko center align karega */
+}
+
+.hero-features li {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    font-size: 18px;
+    margin: 10px 0; /* Thoda gap add karega */
 }
