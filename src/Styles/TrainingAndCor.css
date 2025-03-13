@@ -1,109 +1,126 @@
-/* .hero {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(30, 30, 30, 0.8)), 
-                url('../assets/cource45.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-    font-size: 25px;
-}
-
-.cta-button {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    padding: 14px 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-}
-
-.cta-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
-} */
 /* Hero Section Styling */
 .hero {
     background: url('') no-repeat center center/cover;
-    background-size: cover;  /* Image ko full-screen cover karne ke liye */
-    background-position: center; /* Image center me rahe */
-    background-attachment: fixed; /* Scrolling par image fix rahe */
-    
-    width: 100vw;  /* Full width */
-    height: 100vh; /* Full height */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    width: 100vw;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #f8f9fa; /* Soft white for better readability */
+    color: #f8f9fa;
     text-align: center;
-    font-family: 'Poppins', sans-serif; /* Modern font */
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
     letter-spacing: 0.8px;
     line-height: 1.6;
+    padding: 20px;
 }
 
 /* Heading Styling */
 .hero h1 {
-    font-size: 50px;
+    font-size: 45px;
     font-weight: 700;
-    color: #ffcc00; /* Bright gold for premium look */
+    color: #ffcc00;
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
-    margin-bottom: 10px;
-}
-
-.hero h2 {
-    font-size: 30px;
-    font-weight: 600;
-    color: #ffffff; /* Pure white for contrast */
-    opacity: 0.9;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .hero p {
     font-size: 18px;
     font-weight: 400;
-    color: #dcdcdc; /* Light gray for a subtle effect */
+    color: #dcdcdc;
     opacity: 0.8;
-    max-width: 800px;
+    max-width: 700px;
+    margin-bottom: 20px;
 }
 
-/* CTA Button Styling */
-.cta-button {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    padding: 14px 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: 22px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #ffffff; /* White text for strong visibility */
-}
-
-.cta-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
-}
+/* Features List */
 .hero-features {
     list-style: none;
     padding: 0;
-    text-align: center; /* Text ko center align karega */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .hero-features li {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center horizontally */
+    justify-content: center;
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+/* CTA Button Styling */
+.cta-button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    padding: 10px 20px;
+    border: none;
+    width: 700px;
+    border-radius: 6px;
     font-size: 18px;
-    margin: 10px 0; /* Thoda gap add karega */
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 38px;
+    }
+    .hero p {
+        font-size: 16px;
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        max-width: 500px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+        max-width: 400px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
 }
